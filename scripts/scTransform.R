@@ -1,3 +1,7 @@
+library(Seurat)
+library(sctransform)
+library(tidyverse)
+
 S1 = readRDS("S1_new.rds")
 S2 = readRDS("S2_new.rds")
 S3 = readRDS("S3_new.rds")
