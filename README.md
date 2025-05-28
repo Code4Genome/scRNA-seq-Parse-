@@ -14,12 +14,12 @@ More info: www.parsebiosciences.com
 
 ## 📁 Repository Structure
 
-├── data/ # Raw and processed data (FASTQ, STAR, etc., using conda environment)       
-├── scripts/ # Data analysis scripts in R (Seurat, Harmony, scTransform, DGE)        
+├── data/ # Raw and processed data (sublibrary analysis., using conda environment)       
+├── scripts/ # Data analysis scripts in R (Seurat, Harmony, scTransform, DEG)        
 ├── README.md # Project overview and instructions         
 └── LICENSE
 
 ## 🧪 Project Overview
 
-- **Assay:** Whole transcriptome single-cell RNA-seq
-- **Sample Type:** Human PBMCs
+**Assay:** Whole transcriptome single-cell RNA-seq    
+**Sample Type:** Human PBMCs
