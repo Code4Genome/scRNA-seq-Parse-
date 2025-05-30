@@ -12,6 +12,32 @@ It offers high-quality data, long-term sample storage, and reduced time-course e
 
 More info: www.parsebiosciences.com
 
+## 🧬 Workflow Overview
+
+1. **Preprocessing, Demultiplexing, UMI counting and Expression matrix Generation**
+   - Input: sublibrary combined
+   - Tool: `parse conda environment`
+   - Output: count_matrix.mtx, cell_metadata.csv, all_genes.csv
+
+2. **Quality Control**
+   - Tools: Seurat / Scanpy
+   - Metrics: nFeature_RNA, nCount_RNA, mitochondrial content
+
+3. **Normalization & Integration**
+   - SCTransform, log-normalization
+   - Batch effect correction (Harmony / Seurat integration)
+
+4. **Dimensionality Reduction & Clustering**
+   - PCA, UMAP
+   - Louvain/Leiden clustering
+
+5. **Differential Expression & Marker Identification**
+   - FindMarkers (Seurat), rank_genes_groups (Scanpy)
+
+6. **Cell Type Annotation**
+   - Manual curation or reference-based annotation (SingleR, CellTypist)
+
+
 ## 📁 Repository Structure
 
 ├── data/ # Raw and processed data (sublibrary analysis using conda environment)       
