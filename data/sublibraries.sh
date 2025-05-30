@@ -18,10 +18,6 @@ split-pipe \
     --genes /home/c/c/newvolume_test/Genomes/Homo_sapiens.GRCh38.109.gtf.gz \
     --fasta /home/c/c/newvolume_test/Genomes/Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz
 
-4. Once we have a reference genome; we can run all fastq files ==> generate expression matrices and summary reports ==> run this mode for each sub-library in our experiment
-*mode all runs every step of the main pipeline for a single sublibrary
-*chemistry refers to the kit version that was used in your parse assay contact the experimentalist if you're unsure about which kit was used.
-
 ----run------
 
 Run it in partition --normal
