@@ -151,35 +151,3 @@ View(as.data.frame(colData(ref)))
 View(combined@meta.data)
 
 harmony@assays$RNA@data
-
-#default for SingleR is to perform annotation of each individual cell
-
-pbmc_counts = GetAssayData(harmony, assay = "RNA", slot = "counts")
-pbmc_counts
-
-pred = SingleR(test = pbmc_counts, ref = ref, labels = ref$label.main)
-pred
-
-pred$scores
-
-table(pred$labels)
-
-plotScoreHeatmap(pred)
-
-plotDeltaDistribution(pred)
-
-tab = table(Assigned=pred$labels, Clusters= harmony$seurat_clusters)
-tab
-
-tab1 = write.csv(tab, "clusters_NMO.csv")
-tab1
-
-pheatmap(log10(tab+10), color = colorRampPalette(c("white", "blue"))(10))
-
-harmony$singleR.labels = pred$labels[match(rownames(harmony@meta.data), rownames(pred))]
-DimPlot(harmony, reduction = "umap", group.by = "singleR.labels")
-
-p4 = DimPlot(harmony, reduction = "umap", label = TRUE, pt.size = 0.5) + NoLegend() + ggtitle("seurat_clusters") + theme(plot.title = element_text(hjust = 0.5))
-p4
-
-View(harmony@meta.data)
