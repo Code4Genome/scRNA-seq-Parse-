@@ -205,8 +205,3 @@ View(AQP4_nt@meta.data)
 #ref2 = celldex::DatabaseImmuneCellExpressionData()
 View(as.data.frame(colData(ref)))
 View(A_nt@meta.data)
-
-#default for SingleR is to perform annotation of each individual cell
-
-
-
