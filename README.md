@@ -15,7 +15,7 @@ More info: www.parsebiosciences.com
 ## 🧬 Workflow Overview
 
 1. **Preprocessing, Demultiplexing, UMI counting and Expression matrix Generation**
-   - Input: sublibrary combined
+   - Input: sublibrary 
    - Tool: `parse conda environment`
    - Output: count_matrix.mtx, cell_metadata.csv, all_genes.csv
 
@@ -29,7 +29,6 @@ More info: www.parsebiosciences.com
 
 4. **Dimensionality Reduction & Clustering**
    - PCA, UMAP
-   - Louvain/Leiden clustering
 
 5. **Differential Expression & Marker Identification**
    - FindMarkers (Seurat), rank_genes_groups (Scanpy)
