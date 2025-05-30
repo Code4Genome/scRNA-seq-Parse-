@@ -2,7 +2,10 @@ library (SingleR)
 
 #ref = celldex::HumanPrimaryCellAtlasData()
 
+#default for SingleR is to perform annotation of each individual cell
+
 #Identification of monocyte subsets
+
 #ref2 = celldex::DatabaseImmuneCellExpressionData()
 View(as.data.frame(colData(ref)))
 View(A_nt@meta.data)
